@@ -6,9 +6,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f82729d-5bde-43af-8654-7b13ddc38ff9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GSButtonWidget.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GSButtonWidget.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GiantSpider.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/GiantSpider.uproject" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Maps/LobbyLevel.umap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Maps/TestLevel.umap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSButtonWidget.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSMainMenuWidget.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSServerListMenuWidget.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSButtonWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSButtonWidget.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSMainMenuWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSMainMenuWidget.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerListMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerListMenuWidget.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSUserWidgetBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSUserWidgetBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSButtonWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSButtonWidget.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSMainMenuWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSMainMenuWidget.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerListMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerListMenuWidget.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSUserWidgetBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSUserWidgetBase.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +36,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerListMenuWidget.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xjG2iyWKIb9bicEuQ3ASz5Ou6B" />
   <component name="ProjectViewState">
@@ -259,7 +273,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1630860885960</updated>
-      <workItem from="1630860917031" duration="3384000" />
+      <workItem from="1630860917031" duration="5920000" />
     </task>
     <servers />
   </component>

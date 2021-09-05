@@ -13,7 +13,6 @@ UCLASS(Abstract)
 class GSMENUMODULE_API UGSUserWidgetBase : public UUserWidget
 {
 	GENERATED_BODY()
-
-	UPROPERTY(meta=(BindWidget))
-	class UTextBlock* TestButton;
+	public:
+	virtual void SynchronizeProperties() override;
 };

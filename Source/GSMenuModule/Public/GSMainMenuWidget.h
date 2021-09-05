@@ -9,9 +9,29 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Abstract)
 class GSMENUMODULE_API UGSMainMenuWidget : public UGSUserWidgetBase
 {
 	GENERATED_BODY()
+	
+	protected:
+	virtual void NativeConstruct() override;
+	virtual void NativeOnInitialized() override;
+	
+	public:
+	virtual void SynchronizeProperties() override;
+
+	public:
+	UPROPERTY(meta=(BindWidget))
+	class UGSButtonWidget* SingleplayerButton;
+	UPROPERTY(meta=(BindWidget))
+	UGSButtonWidget* MultiplayerButton;
+	UPROPERTY(meta=(BindWidget))
+	UGSButtonWidget* QuitButton;
+	UPROPERTY(meta=(BindWidget))
+	class UTextBlock* TitleTextBlock;
+
+	UPROPERTY(EditAnywhere, Category="GS|Text")
+	FText TitleText;
 	
 };

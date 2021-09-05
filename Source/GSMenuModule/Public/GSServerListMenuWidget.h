@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GSUserWidgetBase.h"
-#include "GSServerListMenu.generated.h"
+#include "GSServerListMenuWidget.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class GSMENUMODULE_API UGSServerListMenu : public UGSUserWidgetBase
+class GSMENUMODULE_API UGSServerListMenuWidget : public UGSUserWidgetBase
 {
 	GENERATED_BODY()
 	
