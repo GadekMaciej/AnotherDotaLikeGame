@@ -22,9 +22,9 @@ class GSMENUMODULE_API UGSButtonWidget : public UGSUserWidgetBase
 
 	public:
 	UPROPERTY(meta=(BindWidget))
-	class UTextBlock* TextBlock;
+	class UTextBlock* TextBlockElement;
 	UPROPERTY(meta=(BindWidget))
-	class UButton* Button;
+	class UButton* ButtonElement;
 
 	UPROPERTY(EditAnywhere, Category="GS|Text")
 	FText ButtonTextContent;

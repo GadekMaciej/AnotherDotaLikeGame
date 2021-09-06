@@ -3,3 +3,8 @@
 
 #include "GSMainMenuGameMode.h"
 
+void AGSMainMenuGameMode::StartPlay()
+{
+	Super::StartPlay();
+	
+}

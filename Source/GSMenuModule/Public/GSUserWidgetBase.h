@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS(Abstract)
+UCLASS()
 class GSMENUMODULE_API UGSUserWidgetBase : public UUserWidget
 {
 	GENERATED_BODY()

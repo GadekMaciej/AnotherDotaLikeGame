@@ -14,5 +14,16 @@ class GIANTSPIDER_API AGSHUD : public AHUD
 {
 	GENERATED_BODY()
 	virtual void BeginPlay() override;
+
+public:
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<class UGSMainMenuWidget> MainMenuWidgetClass;
+	UPROPERTY()
+	class UGSMainMenuWidget* MainMenuWidget;
+
+	UFUNCTION(BlueprintCallable)
+	void CreateMainMenuWidget();
+	UFUNCTION(BlueprintCallable)
+	void ShowMainMenu();
 	
 };

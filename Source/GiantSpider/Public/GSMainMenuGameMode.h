@@ -13,5 +13,7 @@ UCLASS()
 class GIANTSPIDER_API AGSMainMenuGameMode : public AGameMode
 {
 	GENERATED_BODY()
+
+	virtual void StartPlay() override;
 	
 };
