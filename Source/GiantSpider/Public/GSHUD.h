@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Abstract)
 class GIANTSPIDER_API AGSHUD : public AHUD
 {
 	GENERATED_BODY()
@@ -24,6 +24,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void CreateMainMenuWidget();
 	UFUNCTION(BlueprintCallable)
-	void ShowMainMenu();
+	void ShowMainMenu(UGSMainMenuWidget* MMW);
 	
 };

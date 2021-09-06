@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Abstract)
 class GIANTSPIDER_API UGSGameInstance : public UGameInstance
 {
 	GENERATED_BODY()

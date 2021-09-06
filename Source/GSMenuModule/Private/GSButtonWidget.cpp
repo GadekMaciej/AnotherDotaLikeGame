@@ -17,12 +17,12 @@ void UGSButtonWidget::NativeOnInitialized()
 
 void UGSButtonWidget::SynchronizeProperties()
 {
+	Super::SynchronizeProperties();
 	// If edited inside Editor this widget won't override custom members
 	if(!GetParent())
 	{
 		return;
 	}
-	Super::SynchronizeProperties();
 	if(TextBlockElement)
 	{
 		TextBlockElement->SetText(ButtonTextContent);

@@ -6,23 +6,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f82729d-5bde-43af-8654-7b13ddc38ff9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Config/DefaultEditorSettings.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GSMainMenuLevelScriptActor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GSMainMenuLevelScriptActor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/GS/BP_GSHUD.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/BP_GSHUD.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/GS/Maps/MainMenuLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Maps/MainMenuLevel.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSButtonWidget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSButtonWidget.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSMainMenuWidget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSMainMenuWidget.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSButtonWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSButtonWidget.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSButtonWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSButtonWidget.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSUserWidgetBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSUserWidgetBase.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSMainMenuWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSMainMenuWidget.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerListMenuWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerListMenuWidget.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSUserWidgetBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSUserWidgetBase.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Private/GSHUD.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GSHUD.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Private/GSMainMenuGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GSMainMenuGameMode.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Private/GSMainMenuLevelScriptActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GSMainMenuLevelScriptActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Public/GSGameInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GSGameInstance.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Public/GSGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GSGameMode.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Public/GSHUD.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GSHUD.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Public/GSMainMenuGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GSMainMenuGameMode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Public/GSMainMenuLevelScriptActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GSMainMenuLevelScriptActor.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +276,7 @@
       <workItem from="1630860917031" duration="7706000" />
       <workItem from="1630870856426" duration="401000" />
       <workItem from="1630871337615" duration="3035000" />
-      <workItem from="1630913503393" duration="3543000" />
+      <workItem from="1630913503393" duration="7206000" />
     </task>
     <servers />
   </component>
@@ -303,31 +300,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Source/GiantSpider/Private/GSMainMenuLevelScriptActor.cpp</url>
-          <line>12</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Source/GiantSpider/Private/GSHUD.cpp</url>
-          <line>29</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Source/GiantSpider/Private/GSHUD.cpp</url>
-          <line>15</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Source/GiantSpider/Private/GSHUD.cpp</url>
-          <line>11</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

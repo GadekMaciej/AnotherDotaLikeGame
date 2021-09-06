@@ -21,11 +21,11 @@ void AGSHUD::CreateMainMenuWidget()
 	}
 	if(MainMenuWidget)
 	{
-		ShowMainMenu();
+		ShowMainMenu(MainMenuWidget);
 	}
 }
 
-void AGSHUD::ShowMainMenu()
+void AGSHUD::ShowMainMenu(UGSMainMenuWidget* MMW)
 {
-	MainMenuWidget->AddToViewport();
+	MMW->AddToViewport();
 }
