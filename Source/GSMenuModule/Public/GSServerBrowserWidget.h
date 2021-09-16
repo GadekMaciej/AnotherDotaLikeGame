@@ -34,14 +34,19 @@ public:
 	UPROPERTY(EditDefaultsOnly, NoClear, Category="GS|Navigation")
 	TSubclassOf<UGSUserWidgetBase> MainMenuWidget;
 
+	UPROPERTY(EditDefaultsOnly, NoClear, Category="GS|Navigation")
+	TSubclassOf<UGSUserWidgetBase> HostServerWidget;
+
 	public:
 	UFUNCTION(BlueprintCallable)
-	void MultiplayerButtonOnClicked();
+	void OnMainMenuButtonClicked();
+
+	UFUNCTION(BlueprintCallable)
+	void OnHostButtonClicked();
 
 	UFUNCTION(BlueprintCallable)
 	void ServerListTestFunction();
 	
 	UFUNCTION(BlueprintCallable)
 	void OnServerListEntryClicked(UObject* Item);
-	
 };

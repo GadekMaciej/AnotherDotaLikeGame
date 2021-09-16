@@ -11,16 +11,23 @@
 void UGSServerBrowserWidget::NativeOnInitialized()
 {
 	Super::NativeOnInitialized();
-	MainMenuButton->ButtonElement->OnClicked.AddDynamic(this, &UGSServerBrowserWidget::MultiplayerButtonOnClicked);
+	MainMenuButton->ButtonElement->OnClicked.AddDynamic(this, &UGSServerBrowserWidget::OnMainMenuButtonClicked);
+	HostButton->ButtonElement->OnClicked.AddDynamic(this, &UGSServerBrowserWidget::OnHostButtonClicked);
 	ServerListView->OnItemClicked().AddUObject(this, &UGSServerBrowserWidget::OnServerListEntryClicked);
 	ServerListTestFunction();
 }
 
-void UGSServerBrowserWidget::MultiplayerButtonOnClicked()
+void UGSServerBrowserWidget::OnMainMenuButtonClicked()
 {
 	NavigateToWidget(MainMenuWidget);
 }
 
+void UGSServerBrowserWidget::OnHostButtonClicked()
+{
+	NavigateToWidget(HostServerWidget);
+}
+
+// functions below are placeholders for testing listview widget
 void UGSServerBrowserWidget::ServerListTestFunction()
 {
 	for(int32 i = 0; i < 25; i++)
@@ -34,3 +41,4 @@ void UGSServerBrowserWidget::OnServerListEntryClicked(UObject* Item)
 {
 	NavigateToWidget(MainMenuWidget);
 }
+// ^^^

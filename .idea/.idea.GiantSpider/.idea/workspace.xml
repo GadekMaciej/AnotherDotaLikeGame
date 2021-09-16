@@ -6,17 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f82729d-5bde-43af-8654-7b13ddc38ff9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserEntryObject.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserEntryObject.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSHostServerWidget.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSHostServerWidget.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSHostServerWidget.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSServerListBrowserEntry.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSServerListBrowserEntry.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/GS/Maps/TestLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Maps/TestLevel.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSServerListMenuWidget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSServerListMenuWidget.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GiantSpider.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/GiantSpider.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserEntryWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserEntryWidget.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserWidget.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserEntryWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserEntryWidget.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserWidget.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Private/GSHUD.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GSHUD.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +32,12 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/scara/Documents/Unreal Projects/GiantSpider/Source/GSMenuModule/Private/GSServerBrowserWidget.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerListMenuWidget.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/scara/Documents/Unreal Projects/GiantSpider/Source/GSMenuModule/Private/GSServerBrowserEntryWidget.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/scara/Documents/Unreal Projects/GiantSpider/Source/GSMenuModule/Public/GSServerBrowserWidget.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/scara/Documents/Unreal Projects/GiantSpider/Source/GSMenuModule/Public/GSServerBrowserEntryWidget.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/scara/Documents/Unreal Projects/GiantSpider/Source/GiantSpider/Private/GSHUD.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xjG2iyWKIb9bicEuQ3ASz5Ou6B" />
   <component name="ProjectViewState">
@@ -278,7 +280,7 @@
       <workItem from="1630913503393" duration="7206000" />
       <workItem from="1631193193119" duration="2195000" />
       <workItem from="1631688416601" duration="18079000" />
-      <workItem from="1631775607783" duration="19286000" />
+      <workItem from="1631775607783" duration="22133000" />
     </task>
     <servers />
   </component>
