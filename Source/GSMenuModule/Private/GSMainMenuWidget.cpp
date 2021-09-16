@@ -3,6 +3,8 @@
 
 #include "GSMainMenuWidget.h"
 
+#include "GSButtonWidget.h"
+#include "Components/Button.h"
 #include "Components/TextBlock.h"
 
 void UGSMainMenuWidget::NativeConstruct()
@@ -13,6 +15,8 @@ void UGSMainMenuWidget::NativeConstruct()
 void UGSMainMenuWidget::NativeOnInitialized()
 {
 	Super::NativeOnInitialized();
+	MultiplayerButton->ButtonElement->OnClicked.AddDynamic(this, &UGSMainMenuWidget::MultiplayerButtonOnClicked);
+	QuitButton->ButtonElement->OnClicked.AddDynamic(this, &UGSMainMenuWidget::QuitGame);
 }
 
 void UGSMainMenuWidget::SynchronizeProperties()
@@ -23,3 +27,14 @@ void UGSMainMenuWidget::SynchronizeProperties()
 		TitleTextBlock->SetText(TitleText);
 	}
 }
+
+void UGSMainMenuWidget::QuitGame()
+{
+	FGenericPlatformMisc::RequestExit(false);
+}
+
+void UGSMainMenuWidget::MultiplayerButtonOnClicked()
+{
+	NavigateToWidget(ServerBrowserWidgetClass);
+}
+

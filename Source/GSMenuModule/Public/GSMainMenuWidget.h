@@ -24,14 +24,26 @@ class GSMENUMODULE_API UGSMainMenuWidget : public UGSUserWidgetBase
 	public:
 	UPROPERTY(meta=(BindWidget))
 	class UGSButtonWidget* SingleplayerButton;
+	
 	UPROPERTY(meta=(BindWidget))
 	UGSButtonWidget* MultiplayerButton;
+	
 	UPROPERTY(meta=(BindWidget))
 	UGSButtonWidget* QuitButton;
+	
 	UPROPERTY(meta=(BindWidget))
 	class UTextBlock* TitleTextBlock;
 
 	UPROPERTY(EditAnywhere, Category="GS|Text")
 	FText TitleText;
+
+	UPROPERTY(EditDefaultsOnly, NoClear, Category="GS|Navigation")
+	TSubclassOf<UGSUserWidgetBase> ServerBrowserWidgetClass;
 	
+	protected:
+	UFUNCTION(BlueprintCallable)
+	void QuitGame();
+
+	UFUNCTION(BlueprintCallable)
+	void MultiplayerButtonOnClicked();
 };
