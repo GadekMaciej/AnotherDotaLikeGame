@@ -15,6 +15,9 @@ class GSMENUMODULE_API UGSServerBrowserEntryWidget : public UGSUserWidgetBase, p
 {
 	GENERATED_BODY()
 	
+	protected:
+	virtual void NativeOnListItemObjectSet(UObject* ListItemObject) override;
+	
 public:
 	UPROPERTY(meta=(BindWidget))
 	class UTextBlock* SessionNameTextField;
@@ -24,5 +27,5 @@ public:
 
 	UPROPERTY(meta=(BindWidget))
 	class UTextBlock* SessionIdTextField;
-	
+
 };

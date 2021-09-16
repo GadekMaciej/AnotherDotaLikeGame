@@ -21,6 +21,9 @@ void AGSHUD::CreateMainMenuWidget()
 	}
 	if(MainMenuWidget)
 	{
+		APlayerController* PC = GetOwningPlayerController();
+		PC->SetInputMode(FInputModeUIOnly());
+		PC->SetShowMouseCursor(true);
 		ShowMainMenu(MainMenuWidget);
 	}
 }
