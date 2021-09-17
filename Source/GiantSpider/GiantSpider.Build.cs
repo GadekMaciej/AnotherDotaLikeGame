@@ -14,7 +14,9 @@ public class GiantSpider : ModuleRules
 			"CoreUObject", 
 			"Engine", 
 			"InputCore",
-			"GSMenuModule"
+			"GSMenuModule",
+			"OnlineSubsystem",
+			"OnlineSubsystemUtils"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

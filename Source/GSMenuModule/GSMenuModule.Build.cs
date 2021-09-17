@@ -10,7 +10,8 @@ public class GSMenuModule : ModuleRules
 	
 		PublicDependencyModuleNames.AddRange(new string[]
 		{
-
+			"OnlineSubsystem",
+			"OnlineSubsystemUtils"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[]

@@ -35,5 +35,7 @@ class GSMENUMODULE_API UGSHostServerWidget : public UGSUserWidgetBase
 	
 	UFUNCTION()
 	void OnHostButtonClicked();
-	
+
+	UFUNCTION()
+	void OnSessionCreated(FName SessionName, bool bWasSuccessful);
 };
