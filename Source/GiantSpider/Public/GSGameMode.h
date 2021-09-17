@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Abstract)
 class GIANTSPIDER_API AGSGameMode : public AGameModeBase
 {
 	GENERATED_BODY()

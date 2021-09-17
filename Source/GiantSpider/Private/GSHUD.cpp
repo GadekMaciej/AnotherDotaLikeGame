@@ -2,14 +2,33 @@
 
 
 #include "GSHUD.h"
-#include "Modules/ModuleManager.h"
+
+#include "GSMainMenuWidget.h"
+#include "Blueprint/UserWidget.h"
+#include "Kismet/GameplayStatics.h"
+
 void AGSHUD::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("HUD loaded") );
-	bool ModuleStatus = FModuleManager::Get().IsModuleLoaded("GSMenuModule");
-	if(ModuleStatus)
+}
+
+void AGSHUD::CreateMainMenuWidget()
+{
+	if(IsValid(MainMenuWidgetClass) && !MainMenuWidget)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Some warning message") );
+		MainMenuWidget = CreateWidget<UGSMainMenuWidget>(UGameplayStatics::GetPlayerController(GetWorld(), 0), MainMenuWidgetClass,"MainMenuWidget");
+
 	}
+	if(MainMenuWidget)
+	{
+		APlayerController* PC = GetOwningPlayerController();
+		PC->SetInputMode(FInputModeUIOnly());
+		PC->SetShowMouseCursor(true);
+		ShowMainMenu(MainMenuWidget);
+	}
+}
+
+void AGSHUD::ShowMainMenu(UGSMainMenuWidget* MMW)
+{
+	MMW->AddToViewport();
 }
