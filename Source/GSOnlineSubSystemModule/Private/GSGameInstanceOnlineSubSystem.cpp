@@ -187,10 +187,10 @@ void UGSGameInstanceOnlineSubSystem::JoinSession(const FOnlineSessionSearchResul
 
 void UGSGameInstanceOnlineSubSystem::OnCreateSessionCompleted(FName SessionName, const bool bIsSuccessful)
 {
-	const IOnlineSessionPtr sessionInterface = Online::GetSessionInterface(GetWorld());
-	if (sessionInterface)
+	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
+	if (SessionInterface)
 	{
-		sessionInterface->ClearOnCreateSessionCompleteDelegate_Handle(OnCreateSessionCompleteDelegateHandle);
+		SessionInterface->ClearOnCreateSessionCompleteDelegate_Handle(OnCreateSessionCompleteDelegateHandle);
 	}
 
 	OnCreateSessionCompleteEvent.Broadcast(bIsSuccessful);

@@ -11,7 +11,7 @@
  */
 
 DECLARE_DELEGATE(FOnBackButtonClicked)
-DECLARE_DELEGATE(FOnHostButtonClicked)
+DECLARE_MULTICAST_DELEGATE(FOnMultiHostButtonClicked)
 
 UCLASS(Abstract)
 class GSMENUMODULE_API UGSHostServerWidget : public UGSUserWidgetBase
@@ -22,7 +22,7 @@ class GSMENUMODULE_API UGSHostServerWidget : public UGSUserWidgetBase
 	
 	public:
 	FOnBackButtonClicked FOnBackButtonClickedEvent;
-	FOnHostButtonClicked FOnHostButtonClickedEvent;
+	FOnMultiHostButtonClicked FOnHostButtonClickedEvent;
 	
 	UPROPERTY(meta=(BindWidget))
 	class UEditableTextBox* ServerNameEditText;

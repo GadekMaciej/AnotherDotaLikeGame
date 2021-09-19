@@ -7,6 +7,7 @@
 #include "Blueprint/UserWidget.h"
 #include "Kismet/GameplayStatics.h"
 
+
 void AGSHUD::BeginPlay()
 {
 	Super::BeginPlay();
@@ -17,7 +18,7 @@ void AGSHUD::CreateMainMenuWidget()
 	if(IsValid(MainMenuWidgetClass) && !MainMenuWidget)
 	{
 		MainMenuWidget = CreateWidget<UGSMainMenuWidgetWrapper>(UGameplayStatics::GetPlayerController(GetWorld(), 0), MainMenuWidgetClass,"MainMenuWidget");
-
+		BindMainMenuToSessionSubSystem(MainMenuWidget);
 	}
 	if(MainMenuWidget)
 	{
@@ -27,8 +28,12 @@ void AGSHUD::CreateMainMenuWidget()
 		ShowMainMenu(MainMenuWidget);
 	}
 }
-
-void AGSHUD::ShowMainMenu(UGSMainMenuWidgetWrapper* MMW)
+void AGSHUD::ShowMainMenu(UGSMainMenuWidgetWrapper* Widget)
 {
-	MMW->AddToViewport();
+	Widget->AddToViewport();
+}
+
+void AGSHUD::BindMainMenuToSessionSubSystem(UGSMainMenuWidgetWrapper* Widget)
+{
+	
 }

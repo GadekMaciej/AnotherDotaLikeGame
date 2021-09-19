@@ -2,24 +2,22 @@
 
 using UnrealBuildTool;
 
-public class GSMenuModule : ModuleRules
+public class GSOnlineSubSystemModule : ModuleRules
 {
-	public GSMenuModule(ReadOnlyTargetRules Target) : base(Target)
+	public GSOnlineSubSystemModule(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
 		PublicDependencyModuleNames.AddRange(new string[]
 		{
 			"OnlineSubsystem",
-			"OnlineSubsystemUtils",
-			"GSOnlineSubSystemModule"
+			"OnlineSubsystemUtils"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[]
 		{
 			"Core", 
 			"CoreUObject",
-			"UMG"
 		});
 
 		// Uncomment if you are using Slate UI

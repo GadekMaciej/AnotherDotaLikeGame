@@ -20,7 +20,7 @@ DECLARE_MULTICAST_DELEGATE_TwoParams(FGSOnFindSessionsComplete, const TArray<FOn
 DECLARE_MULTICAST_DELEGATE_OneParam(FGSOnJoinSessionComplete, EOnJoinSessionCompleteResult::Type Result);
 
 UCLASS()
-class GIANTSPIDER_API UGSGameInstanceOnlineSubSystem : public UGameInstanceSubsystem
+class GSONLINESUBSYSTEMMODULE_API UGSGameInstanceOnlineSubSystem : public UGameInstanceSubsystem
 {
 	GENERATED_BODY()
 	

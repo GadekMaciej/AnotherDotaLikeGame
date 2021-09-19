@@ -23,7 +23,11 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void CreateMainMenuWidget();
+	
+	private:
 	UFUNCTION(BlueprintCallable)
-	void ShowMainMenu(UGSMainMenuWidgetWrapper* MMW);
+	void ShowMainMenu(UGSMainMenuWidgetWrapper* Widget);
+	UFUNCTION(BlueprintCallable)
+	void BindMainMenuToSessionSubSystem(UGSMainMenuWidgetWrapper* Widget);
 	
 };

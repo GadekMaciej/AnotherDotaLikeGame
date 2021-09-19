@@ -24,6 +24,8 @@ class GSMENUMODULE_API UGSMainMenuWidget : public UGSUserWidgetBase
 	protected:
 	virtual void NativeConstruct() override;
 	virtual void NativeOnInitialized() override;
+
+	private:
 	
 	public:
 	OnMultiplayerButtonClicked OnMultiplayerButtonClickedEvent;

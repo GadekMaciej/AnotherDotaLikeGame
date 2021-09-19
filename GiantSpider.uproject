@@ -21,6 +21,16 @@
 			"AdditionalDependencies": [
 				"Engine",
 				"UMG",
+				"CoreUObject",
+				"GSOnlineSubSystemModule"
+			]
+		},
+		{
+			"Name": "GSOnlineSubSystemModule",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
 				"CoreUObject"
 			]
 		}

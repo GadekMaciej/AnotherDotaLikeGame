@@ -39,7 +39,7 @@ void UGSMainMenuWidgetWrapper::BindDelegates()
 	HostServerWidget->FOnBackButtonClickedEvent
 	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, SwitcherWidgetIndex::ServerBrowserWidget);
 	HostServerWidget->FOnHostButtonClickedEvent
-	.BindLambda([]()
+	.AddLambda([]()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Hosting is not yet implemented"));
 	});

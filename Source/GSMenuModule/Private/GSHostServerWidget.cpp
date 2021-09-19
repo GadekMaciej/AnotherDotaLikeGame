@@ -25,8 +25,5 @@ void UGSHostServerWidget::OnBackButtonClicked()
 
 void UGSHostServerWidget::OnHostButtonClicked()
 {
-	if(!FOnHostButtonClickedEvent.ExecuteIfBound())
-	{
-		checkNoEntry();
-	}
+	FOnHostButtonClickedEvent.Broadcast();
 }
