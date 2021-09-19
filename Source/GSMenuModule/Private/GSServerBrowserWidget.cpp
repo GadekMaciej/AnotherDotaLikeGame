@@ -19,12 +19,18 @@ void UGSServerBrowserWidget::NativeOnInitialized()
 
 void UGSServerBrowserWidget::OnMainMenuButtonClicked()
 {
-	NavigateToWidget(MainMenuWidget);
+	if(!FOnMainMenuButtonClickedEvent.ExecuteIfBound())
+	{
+		checkNoEntry();
+	}
 }
 
 void UGSServerBrowserWidget::OnHostButtonClicked()
 {
-	NavigateToWidget(HostServerWidget);
+	if(!FOnHostButtonClickedEvent.ExecuteIfBound())
+	{
+		checkNoEntry();
+	}
 }
 
 // functions below are placeholders for testing listview widget
@@ -39,6 +45,14 @@ void UGSServerBrowserWidget::ServerListTestFunction()
 
 void UGSServerBrowserWidget::OnServerListEntryClicked(UObject* Item)
 {
-	NavigateToWidget(MainMenuWidget);
+	if(!FOnMainMenuButtonClickedEvent.ExecuteIfBound())
+	{
+		checkNoEntry();
+	}
 }
+
+void UGSServerBrowserWidget::AddServerListItem()
+{
+}
+
 // ^^^

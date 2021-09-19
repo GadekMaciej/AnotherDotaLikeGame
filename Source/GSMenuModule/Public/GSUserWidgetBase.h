@@ -15,7 +15,8 @@ class GSMENUMODULE_API UGSUserWidgetBase : public UUserWidget
 	GENERATED_BODY()
 	public:
 	virtual void SynchronizeProperties() override;
-	
-	UFUNCTION(BlueprintCallable)
-	void NavigateToWidget(TSubclassOf<UGSUserWidgetBase> NewWidget);
+
+	// deprecated
+	// UFUNCTION(BlueprintCallable)
+	// void NavigateToWidget(TSubclassOf<UGSUserWidgetBase> NewWidget);
 };

@@ -9,13 +9,30 @@
 /**
  * 
  */
+
+DECLARE_DELEGATE(FOnRefreshButtonClicked)
+DECLARE_DELEGATE(FOnJoinButtonClicked)
+DECLARE_DELEGATE(FOnHostButtonClicked)
+DECLARE_DELEGATE(FOnMainMenuButtonClicked)
+
+
 UCLASS(Abstract)
 class GSMENUMODULE_API UGSServerBrowserWidget : public UGSUserWidgetBase
 {
 	GENERATED_BODY()
-	public:
+	
+	protected:
 	virtual void NativeOnInitialized() override;
-public:
+	
+	public:
+	FOnRefreshButtonClicked FOnRefreshButtonClickedEvent;
+	FOnJoinButtonClicked FOnJoinButtonClickedEvent;
+	FOnHostButtonClicked FOnHostButtonClickedEvent;
+	FOnMainMenuButtonClicked FOnMainMenuButtonClickedEvent;
+	
+	protected:
+	
+	private:
 	UPROPERTY(meta=(BindWidget))
 	class UGSButtonWidget* RefreshButton;
 	
@@ -31,22 +48,25 @@ public:
 	UPROPERTY(meta=(BindWidget))
 	class UListView* ServerListView;
 	
-	UPROPERTY(EditDefaultsOnly, NoClear, Category="GS|Navigation")
-	TSubclassOf<UGSUserWidgetBase> MainMenuWidget;
-
-	UPROPERTY(EditDefaultsOnly, NoClear, Category="GS|Navigation")
-	TSubclassOf<UGSUserWidgetBase> HostServerWidget;
 
 	public:
-	UFUNCTION(BlueprintCallable)
-	void OnMainMenuButtonClicked();
 
-	UFUNCTION(BlueprintCallable)
-	void OnHostButtonClicked();
-
+	// test
 	UFUNCTION(BlueprintCallable)
 	void ServerListTestFunction();
 	
 	UFUNCTION(BlueprintCallable)
 	void OnServerListEntryClicked(UObject* Item);
+
+	UFUNCTION(BlueprintCallable)
+	void AddServerListItem();
+	
+	protected:
+	UFUNCTION(BlueprintCallable)
+	void OnMainMenuButtonClicked();
+	UFUNCTION(BlueprintCallable)
+	void OnHostButtonClicked();
+	
+	private:
+
 };

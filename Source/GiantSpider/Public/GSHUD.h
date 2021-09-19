@@ -17,13 +17,13 @@ class GIANTSPIDER_API AGSHUD : public AHUD
 
 public:
 	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<class UGSMainMenuWidget> MainMenuWidgetClass;
+	TSubclassOf<class UGSMainMenuWidgetWrapper> MainMenuWidgetClass;
 	UPROPERTY()
-	class UGSMainMenuWidget* MainMenuWidget;
+	UGSMainMenuWidgetWrapper* MainMenuWidget;
 
 	UFUNCTION(BlueprintCallable)
 	void CreateMainMenuWidget();
 	UFUNCTION(BlueprintCallable)
-	void ShowMainMenu(UGSMainMenuWidget* MMW);
+	void ShowMainMenu(UGSMainMenuWidgetWrapper* MMW);
 	
 };
