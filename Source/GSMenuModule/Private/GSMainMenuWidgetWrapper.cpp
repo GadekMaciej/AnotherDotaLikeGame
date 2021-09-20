@@ -3,6 +3,7 @@
 
 #include "GSMainMenuWidgetWrapper.h"
 
+#include "GSGameInstanceOnlineSubSystem.h"
 #include "GSMainMenuWidget.h"
 #include "GSServerBrowserWidget.h"
 #include "GSHostServerWidget.h"
@@ -19,10 +20,17 @@ void UGSMainMenuWidgetWrapper::SwitchWidget(UWidgetSwitcher* Widget, SwitcherWid
 {
 	const int32 IndexToInt32 = static_cast<int32>(Index);
 	Widget->SetActiveWidgetIndex(IndexToInt32);
+	UGSUserWidgetBase* ActiveWidget = Cast<UGSUserWidgetBase>(Widget->GetWidgetAtIndex(IndexToInt32));
+	if (ActiveWidget)
+	{
+		ActiveWidget->OnSwitch();
+	}
 }
 
 void UGSMainMenuWidgetWrapper::BindDelegates()
 {
+	UGSGameInstanceOnlineSubSystem* GIOS = GetGameInstance()->GetSubsystem<UGSGameInstanceOnlineSubSystem>();
+	
 	MainMenuWidget->OnMultiplayerButtonClickedEvent
 	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, SwitcherWidgetIndex::ServerBrowserWidget);
 	MainMenuWidget->OnQuitButtonClickedEvent
@@ -35,6 +43,10 @@ void UGSMainMenuWidgetWrapper::BindDelegates()
 	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, SwitcherWidgetIndex::HostServerWidget);
 	ServerBrowserWidget->FOnMainMenuButtonClickedEvent
 	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, SwitcherWidgetIndex::MainMenuWidget);
+	
+	//TODO this is bad, hardcoded values. Probably only way is to change delegate signature.
+	ServerBrowserWidget->FOnRefreshButtonClickedEvent
+	.BindUObject(GIOS, &UGSGameInstanceOnlineSubSystem::FindSession, 10, true);
 
 	HostServerWidget->FOnBackButtonClickedEvent
 	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, SwitcherWidgetIndex::ServerBrowserWidget);
@@ -43,4 +55,7 @@ void UGSMainMenuWidgetWrapper::BindDelegates()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Hosting is not yet implemented"));
 	});
+	
+	HostServerWidget->FOnHostButtonClickedEvent
+	.AddUObject(GIOS, &UGSGameInstanceOnlineSubSystem::CreateSession, 4, true);
 }

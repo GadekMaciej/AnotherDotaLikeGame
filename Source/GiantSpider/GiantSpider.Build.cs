@@ -15,6 +15,7 @@ public class GiantSpider : ModuleRules
 			"Engine", 
 			"InputCore",
 			"GSMenuModule",
+			"GSOnlineSubSystemModule",
 			"OnlineSubsystem",
 			"OnlineSubsystemUtils"
 		});

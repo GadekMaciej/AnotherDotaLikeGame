@@ -5,8 +5,6 @@
 
 #include "GSButtonWidget.h"
 #include "Components/Button.h"
-#include "Components/EditableTextBox.h"
-#include "OnlineSubsystem.h"
 
 void UGSHostServerWidget::NativeOnInitialized()
 {

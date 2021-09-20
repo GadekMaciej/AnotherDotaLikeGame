@@ -13,5 +13,10 @@ UCLASS(Abstract)
 class GIANTSPIDER_API UGSGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
-	
+
+	public:
+	virtual void Init() override;
+	// test function for checking if session was created
+	UFUNCTION()
+	void WasSessionCreated(bool bIsSuccessful);
 };

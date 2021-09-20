@@ -16,7 +16,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FGSOnUpdateSessionComplete, bool, bI
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FGSOnStartSessionComplete, bool, bIsSuccessful);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FGSOnEndSessionComplete, bool, bIsSuccessful);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FGSOnDestroySessionComplete, bool, bIsSuccessful);
-DECLARE_MULTICAST_DELEGATE_TwoParams(FGSOnFindSessionsComplete, const TArray<FOnlineSessionSearchResult>& SessionResults, bool bIsSuccessfull);
+DECLARE_MULTICAST_DELEGATE_TwoParams(FGSOnFindSessionsComplete, const TArray<FOnlineSessionSearchResult>& SessionResults, bool bIsSuccessful);
 DECLARE_MULTICAST_DELEGATE_OneParam(FGSOnJoinSessionComplete, EOnJoinSessionCompleteResult::Type Result);
 
 UCLASS()
@@ -40,7 +40,7 @@ class GSONLINESUBSYSTEMMODULE_API UGSGameInstanceOnlineSubSystem : public UGameI
 	void StartSession();
 	void EndSession();
 	void DestroySession();
-	void FindSession(int32 MaxSearchResults, bool bIsLANQuery);
+	void FindSession(int32 MaxSearchResults = 32, bool bIsLANQuery = true);
 	void JoinSession(const FOnlineSessionSearchResult& SessionResult);
 	
 	protected:

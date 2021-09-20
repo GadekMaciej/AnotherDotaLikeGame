@@ -8,6 +8,10 @@ void UGSUserWidgetBase::SynchronizeProperties()
 	Super::SynchronizeProperties();
 }
 
+void UGSUserWidgetBase::OnSwitch()
+{
+}
+
 // deprecated
 // void UGSUserWidgetBase::NavigateToWidget(const TSubclassOf<UGSUserWidgetBase> NewWidget)
 // {

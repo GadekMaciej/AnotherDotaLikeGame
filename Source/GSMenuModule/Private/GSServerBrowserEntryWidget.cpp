@@ -14,7 +14,7 @@ void UGSServerBrowserEntryWidget::NativeOnListItemObjectSet(UObject* ListItemObj
 	if(ensureAlwaysMsgf(EntryData, TEXT("Server Browser entry data cast failed")))
 	{
 		SessionNameTextField->SetText(EntryData->EntryData.SessionName);
-		SessionIdTextField->SetText(EntryData->EntryData.SessionId);
+		//SessionIdTextField->SetText(EntryData->EntryData.SessionId);
 		SessionHostTextField->SetText(EntryData->EntryData.HostName);
 	}
 }

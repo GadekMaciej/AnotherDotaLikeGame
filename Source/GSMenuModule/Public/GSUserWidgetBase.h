@@ -16,6 +16,9 @@ class GSMENUMODULE_API UGSUserWidgetBase : public UUserWidget
 	public:
 	virtual void SynchronizeProperties() override;
 
+	// logic that runs optionally after this widget is being swiched onto 
+	UFUNCTION(BlueprintCallable)
+	virtual void OnSwitch();
 	// deprecated
 	// UFUNCTION(BlueprintCallable)
 	// void NavigateToWidget(TSubclassOf<UGSUserWidgetBase> NewWidget);
