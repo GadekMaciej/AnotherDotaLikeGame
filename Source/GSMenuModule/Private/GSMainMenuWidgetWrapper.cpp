@@ -44,18 +44,13 @@ void UGSMainMenuWidgetWrapper::BindDelegates()
 	ServerBrowserWidget->FOnMainMenuButtonClickedEvent
 	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, SwitcherWidgetIndex::MainMenuWidget);
 	
-	//TODO this is bad, hardcoded values. Probably only way is to change delegate signature.
+	// TODO this is bad, hardcoded values. Probably only way is to change delegate signature.
 	ServerBrowserWidget->FOnRefreshButtonClickedEvent
 	.BindUObject(GIOS, &UGSGameInstanceOnlineSubSystem::FindSession, 10, true);
-
+	
 	HostServerWidget->FOnBackButtonClickedEvent
 	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, SwitcherWidgetIndex::ServerBrowserWidget);
 	HostServerWidget->FOnHostButtonClickedEvent
-	.AddLambda([]()
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Hosting is not yet implemented"));
-	});
-	
-	HostServerWidget->FOnHostButtonClickedEvent
 	.AddUObject(GIOS, &UGSGameInstanceOnlineSubSystem::CreateSession, 4, true);
+	
 }

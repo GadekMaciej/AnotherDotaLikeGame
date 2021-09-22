@@ -4,6 +4,7 @@
 #include "GSGameInstanceOnlineSubSystem.h"
 
 #include "OnlineSubsystemUtils.h"
+#include "Kismet/GameplayStatics.h"
 
 UGSGameInstanceOnlineSubSystem::UGSGameInstanceOnlineSubSystem()
 	:
@@ -192,7 +193,7 @@ void UGSGameInstanceOnlineSubSystem::OnCreateSessionCompleted(FName SessionName,
 	{
 		SessionInterface->ClearOnCreateSessionCompleteDelegate_Handle(OnCreateSessionCompleteDelegateHandle);
 	}
-
+	UGameplayStatics::OpenLevel(GetWorld(), "TestLevel", true, "Listen");
 	OnCreateSessionCompleteEvent.Broadcast(bIsSuccessful);
 }
 
@@ -257,15 +258,22 @@ void UGSGameInstanceOnlineSubSystem::OnFindSessionCompleted(const bool bIsSucces
 	OnFindSessionsCompleteEvent.Broadcast(LastSessionSearch->SearchResults, bIsSuccessful);
 }
 
-void UGSGameInstanceOnlineSubSystem::OnJoinSessionCompleted(FName SessionName,
-	EOnJoinSessionCompleteResult::Type Result)
+void UGSGameInstanceOnlineSubSystem::OnJoinSessionCompleted(FName SessionName, EOnJoinSessionCompleteResult::Type Result)
 {
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (SessionInterface)
 	{
 		SessionInterface->ClearOnJoinSessionCompleteDelegate_Handle(OnJoinSessionCompleteDelegateHandle);
 	}
-
+	// // TODO debug only get rid of this
+	// FString Address;
+	// if(SessionInterface->GetResolvedConnectString(SessionName, Address))
+	// {
+	// 	APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+	// 	PC->ClientTravel(Address, ETravelType::TRAVEL_Absolute);
+	// }
+	// //	^	^	^
+	TryTravelToCurrentSession();
 	OnJoinSessionCompleteEvent.Broadcast(Result);
 }
 

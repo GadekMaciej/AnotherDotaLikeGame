@@ -7,18 +7,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0f82729d-5bde-43af-8654-7b13ddc38ff9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GiantSpider - Shortcut.lnk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSHostServerWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSHostServerWidget.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSMainMenuWidget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSMainMenuWidget.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSMainMenuWidgetWrapper.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSMainMenuWidgetWrapper.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserEntryWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserEntryWidget.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserWidget.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSUserWidgetBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSUserWidgetBase.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserEntryStruct.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserEntryStruct.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserWidget.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSUserWidgetBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSUserWidgetBase.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/Private/GSGameInstanceOnlineSubSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/Private/GSGameInstanceOnlineSubSystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/Public/GSGameInstanceOnlineSubSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/Public/GSGameInstanceOnlineSubSystem.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/GiantSpider.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/GiantSpider.Build.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Private/GSGameInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GSGameInstance.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Public/GSGameInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GSGameInstance.h" afterDir="false" />
     </list>
@@ -47,7 +41,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.42056075" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.42029887" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -293,7 +287,11 @@
       <workItem from="1632035271109" duration="16955000" />
       <workItem from="1632060341021" duration="11935000" />
       <workItem from="1632073753908" duration="1820000" />
-      <workItem from="1632128056521" duration="10992000" />
+      <workItem from="1632128056521" duration="11652000" />
+      <workItem from="1632227864091" duration="17844000" />
+      <workItem from="1632252859517" duration="900000" />
+      <workItem from="1632254036098" duration="318000" />
+      <workItem from="1632291324772" duration="1732000" />
     </task>
     <servers />
   </component>
@@ -325,6 +323,11 @@
           <url>file://$PROJECT_DIR$/Source/GSMenuModule/Private/GSMainMenuWidgetWrapper.cpp</url>
           <line>25</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_4.26/Engine/Source/Runtime/Engine/Private/PlayerController.cpp</url>
+          <line>4773</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

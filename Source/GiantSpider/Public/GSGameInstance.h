@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
+#include "Interfaces/OnlineSessionInterface.h"
 #include "GSGameInstance.generated.h"
 
 /**
@@ -18,5 +19,7 @@ class GIANTSPIDER_API UGSGameInstance : public UGameInstance
 	virtual void Init() override;
 	// test function for checking if session was created
 	UFUNCTION()
-	void WasSessionCreated(bool bIsSuccessful);
+	void OnPlayerSessionCreated(bool bIsSuccessful);
+
+	void OnPlayerSessionJoined(EOnJoinSessionCompleteResult::Type Result);
 };

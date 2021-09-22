@@ -49,9 +49,8 @@ class GSMENUMODULE_API UGSServerBrowserWidget : public UGSUserWidgetBase
 	UPROPERTY(meta=(BindWidget))
 	class UListView* ServerListView;
 
-	UPROPERTY()
-	class UGSServerBrowserEntryWidget* CurrentlySelectedEntry;
-
+	TArray<FOnlineSessionSearchResult> LastSessionSearchResults;
+	
 	public:	
 	UFUNCTION(BlueprintCallable)
 	void OnServerListEntryClicked(UObject* Item);
@@ -62,13 +61,11 @@ class GSMENUMODULE_API UGSServerBrowserWidget : public UGSUserWidgetBase
 	UFUNCTION(BlueprintCallable)
 	void OnRefreshButtonClicked();
 	UFUNCTION(BlueprintCallable)
+	void OnJoinButtonClicked();
+	UFUNCTION(BlueprintCallable)
 	void OnMainMenuButtonClicked();
 	UFUNCTION(BlueprintCallable)
 	void OnHostButtonClicked();
 	// TODO make below function UFUNCTION, by using Ustruct that wraps FOnlineSessionSearchResult.
 	void RefreshServerList(const TArray<FOnlineSessionSearchResult>& SessionResults, bool bIsSuccessful);
-	
-	private:
-	void OnEntryClicked(UObject* Entry);
-
 };

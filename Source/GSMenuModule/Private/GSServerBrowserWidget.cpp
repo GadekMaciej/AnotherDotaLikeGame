@@ -15,10 +15,7 @@ void UGSServerBrowserWidget::NativeOnInitialized()
 	MainMenuButton->ButtonElement->OnClicked.AddDynamic(this, &ThisClass::OnMainMenuButtonClicked);
 	HostButton->ButtonElement->OnClicked.AddDynamic(this, &ThisClass::OnHostButtonClicked);
 	RefreshButton->ButtonElement->OnClicked.AddDynamic(this, &ThisClass::OnRefreshButtonClicked);
-	ServerListView->OnItemClicked().AddUObject(this, &ThisClass::OnServerListEntryClicked);
-
-	ServerListView->OnItemClicked().AddUObject(this, &ThisClass::OnEntryClicked);
-	
+	JoinButton->ButtonElement->OnClicked.AddDynamic(this, &ThisClass::OnJoinButtonClicked);
 	UGSGameInstanceOnlineSubSystem* GIOS = GetGameInstance()->GetSubsystem<UGSGameInstanceOnlineSubSystem>();
 	GIOS->OnFindSessionsCompleteEvent.AddUObject(this, &ThisClass::RefreshServerList);
 }
@@ -58,8 +55,9 @@ void UGSServerBrowserWidget::OnSwitch()
 	}
 }
 
-void UGSServerBrowserWidget::RefreshServerList(const TArray<class FOnlineSessionSearchResult>& SessionResults, bool bIsSuccessful)
+void UGSServerBrowserWidget::RefreshServerList(const TArray<FOnlineSessionSearchResult>& SessionResults, bool bIsSuccessful)
 {
+	LastSessionSearchResults = SessionResults;
 	if (bIsSuccessful)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("session found just fine") );
@@ -87,11 +85,23 @@ void UGSServerBrowserWidget::OnRefreshButtonClicked()
 	}
 }
 
-void UGSServerBrowserWidget::OnEntryClicked(UObject* Entry)
+void UGSServerBrowserWidget::OnJoinButtonClicked()
 {
-	UGSServerBrowserEntryObject* EntryCasted = Cast<UGSServerBrowserEntryObject>(Entry);
-	if (EntryCasted)
+	UGSServerBrowserEntryObject* SelectedEntryItem = ServerListView->GetSelectedItem<UGSServerBrowserEntryObject>();
+	if(SelectedEntryItem)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("server entry on clicked fired"));
+		UE_LOG(LogTemp, Warning, TEXT("There is A selected Item"));
+		UGSGameInstanceOnlineSubSystem* GIOS = GetGameInstance()->GetSubsystem<UGSGameInstanceOnlineSubSystem>();
+		if (GIOS)
+		{
+			const int32 SessionIndex = ServerListView->GetIndexForItem(SelectedEntryItem);
+			FOnlineSessionSearchResult SelectedSession = LastSessionSearchResults[SessionIndex];
+			GIOS->JoinSession(SelectedSession);
+		}
+	}else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("There is no selected Item"));
+
 	}
 }
+
