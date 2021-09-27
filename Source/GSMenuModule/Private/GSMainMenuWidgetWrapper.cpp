@@ -13,18 +13,14 @@ void UGSMainMenuWidgetWrapper::NativeOnInitialized()
 {
 	Super::NativeOnInitialized();
 	BindDelegates();
-	SwitchWidget(MainMenuWidgetSwitcher, SwitcherWidgetIndex::MainMenuWidget);
+	SwitchWidget(MainMenuWidgetSwitcher, MainMenuWidget);
 }
 
-void UGSMainMenuWidgetWrapper::SwitchWidget(UWidgetSwitcher* Widget, SwitcherWidgetIndex Index)
+void UGSMainMenuWidgetWrapper::SwitchWidget(UWidgetSwitcher* Widget, UGSUserWidgetBase* Index)
 {
-	const int32 IndexToInt32 = static_cast<int32>(Index);
-	Widget->SetActiveWidgetIndex(IndexToInt32);
-	UGSUserWidgetBase* ActiveWidget = Cast<UGSUserWidgetBase>(Widget->GetWidgetAtIndex(IndexToInt32));
-	if (ActiveWidget)
-	{
-		ActiveWidget->OnSwitch();
-	}
+
+	Widget->SetActiveWidget(Index);
+	Index->OnSwitch();
 }
 
 void UGSMainMenuWidgetWrapper::BindDelegates()
@@ -32,7 +28,7 @@ void UGSMainMenuWidgetWrapper::BindDelegates()
 	UGSGameInstanceOnlineSubSystem* GIOS = GetGameInstance()->GetSubsystem<UGSGameInstanceOnlineSubSystem>();
 	
 	MainMenuWidget->OnMultiplayerButtonClickedEvent
-	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, SwitcherWidgetIndex::ServerBrowserWidget);
+	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, (UGSUserWidgetBase*)ServerBrowserWidget);
 	MainMenuWidget->OnQuitButtonClickedEvent
 	.BindLambda([]()
 	{
@@ -40,17 +36,17 @@ void UGSMainMenuWidgetWrapper::BindDelegates()
 	});
 
 	ServerBrowserWidget->FOnHostButtonClickedEvent
-	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, SwitcherWidgetIndex::HostServerWidget);
+	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, (UGSUserWidgetBase*)HostServerWidget);
 	ServerBrowserWidget->FOnMainMenuButtonClickedEvent
-	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, SwitcherWidgetIndex::MainMenuWidget);
+	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, (UGSUserWidgetBase*)MainMenuWidget);
 	
 	// TODO this is bad, hardcoded values. Probably only way is to change delegate signature.
 	ServerBrowserWidget->FOnRefreshButtonClickedEvent
-	.BindUObject(GIOS, &UGSGameInstanceOnlineSubSystem::FindSession, 10, true);
+	.BindUObject(GIOS, &UGSGameInstanceOnlineSubSystem::FindSession, 300, false);
 	
 	HostServerWidget->FOnBackButtonClickedEvent
-	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, SwitcherWidgetIndex::ServerBrowserWidget);
+	.BindUObject(this, &ThisClass::SwitchWidget, MainMenuWidgetSwitcher, (UGSUserWidgetBase*)ServerBrowserWidget);
 	HostServerWidget->FOnHostButtonClickedEvent
-	.AddUObject(GIOS, &UGSGameInstanceOnlineSubSystem::CreateSession, 4, true);
+	.AddUObject(GIOS, &UGSGameInstanceOnlineSubSystem::CreateSession, 2, false);
 	
 }

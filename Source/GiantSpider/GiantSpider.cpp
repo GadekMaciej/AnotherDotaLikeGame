@@ -6,4 +6,4 @@
 IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, GiantSpider, "GiantSpider" );
 
 // custom log categories definitions
-DEFINE_LOG_CATEGORY(LogGS_Debug_Info);
+DEFINE_LOG_CATEGORY(LogGSGiantSpider);

@@ -20,6 +20,11 @@ class GIANTSPIDER_API UGSGameInstance : public UGameInstance
 	// test function for checking if session was created
 	UFUNCTION()
 	void OnPlayerSessionCreated(bool bIsSuccessful);
-
 	void OnPlayerSessionJoined(EOnJoinSessionCompleteResult::Type Result);
+
+	protected:
+	virtual void OnStart() override;
+
+	private:
+	void LogCurrentOnlineSubsystem();
 };

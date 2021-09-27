@@ -4,7 +4,7 @@
 #include "GSGameInstance.h"
 
 #include "GSGameInstanceOnlineSubSystem.h"
-#include "Kismet/GameplayStatics.h"
+#include "OnlineSubsystem.h"
 
 void UGSGameInstance::Init()
 {
@@ -31,14 +31,26 @@ void UGSGameInstance::OnPlayerSessionJoined(EOnJoinSessionCompleteResult::Type R
 {
 	if (Result == EOnJoinSessionCompleteResult::Type::Success)
 	{
-		APlayerController* PC = GetFirstLocalPlayerController();
-		if (PC)
-		{
-			//PC->ClientTravel();
-		}
+		UE_LOG(LogTemp, Warning, TEXT("Session joined successful"))
 	}
 	else
 	{
 		UE_LOG(LogTemp, Error, TEXT("Error, Could not join the session"))
+	}
+}
+
+void UGSGameInstance::OnStart()
+{
+	Super::OnStart();
+	LogCurrentOnlineSubsystem();
+}
+
+void UGSGameInstance::LogCurrentOnlineSubsystem()
+{
+	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	if (OSS)
+	{
+		FString SubsystemName = OSS->GetSubsystemName().ToString();
+		UE_LOG(LogTemp, Warning, TEXT("Loaded Subsystem: %s"), *SubsystemName);
 	}
 }

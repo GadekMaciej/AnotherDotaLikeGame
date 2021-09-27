@@ -5,5 +5,5 @@
 #include "CoreMinimal.h"
 
 // declare custom log categories below, then define them in .cpp
-DECLARE_LOG_CATEGORY_EXTERN(LogGS_Debug_Info, Log, All);
+DECLARE_LOG_CATEGORY_EXTERN(LogGSGiantSpider, Log, All);
 

@@ -7,12 +7,20 @@
   <component name="ChangeListManager">
     <list default="true" id="0f82729d-5bde-43af-8654-7b13ddc38ff9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSMainMenuWidget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSMainMenuWidget.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GiantSpider.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/GiantSpider.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/GSMenuModule.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/GSMenuModule.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/GSMenuModule.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/GSMenuModule.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSMainMenuWidgetWrapper.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSMainMenuWidgetWrapper.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserWidget.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserEntryStruct.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserEntryStruct.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserWidget.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSMainMenuWidgetWrapper.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSMainMenuWidgetWrapper.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/GSOnlineSubSystemModule.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/GSOnlineSubSystemModule.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/GSOnlineSubSystemModule.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/GSOnlineSubSystemModule.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/GSOnlineSubSystemModule.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/GSOnlineSubSystemModule.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/Private/GSGameInstanceOnlineSubSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/Private/GSGameInstanceOnlineSubSystem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/GiantSpider.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/GiantSpider.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/GiantSpider.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/GiantSpider.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/GiantSpider.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/GiantSpider.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Private/GSGameInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GSGameInstance.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Public/GSGameInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GSGameInstance.h" afterDir="false" />
     </list>
@@ -33,7 +41,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Inc/GSOnlineSubSystemModule/GSOnlineSubSystemModuleClasses.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerListMenuWidget.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d10sdklayers.h" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xjG2iyWKIb9bicEuQ3ASz5Ou6B" />
   <component name="ProjectViewState">
@@ -291,7 +301,11 @@
       <workItem from="1632227864091" duration="17844000" />
       <workItem from="1632252859517" duration="900000" />
       <workItem from="1632254036098" duration="318000" />
-      <workItem from="1632291324772" duration="1732000" />
+      <workItem from="1632291324772" duration="13756000" />
+      <workItem from="1632389571089" duration="3073000" />
+      <workItem from="1632502660167" duration="5655000" />
+      <workItem from="1632508473205" duration="1354000" />
+      <workItem from="1632648639503" duration="7562000" />
     </task>
     <servers />
   </component>
@@ -319,11 +333,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Source/GSMenuModule/Private/GSMainMenuWidgetWrapper.cpp</url>
-          <line>25</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_4.26/Engine/Source/Runtime/Engine/Private/PlayerController.cpp</url>
           <line>4773</line>

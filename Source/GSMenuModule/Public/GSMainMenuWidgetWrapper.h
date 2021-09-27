@@ -46,7 +46,7 @@ class GSMENUMODULE_API UGSMainMenuWidgetWrapper : public UGSUserWidgetBase
 
 	public:
 	UFUNCTION(BlueprintCallable)
-	void SwitchWidget(UWidgetSwitcher* Widget, SwitcherWidgetIndex Index);
+	void SwitchWidget(UWidgetSwitcher* Widget, UGSUserWidgetBase* Index);
 	
 	private:
 	void BindDelegates();

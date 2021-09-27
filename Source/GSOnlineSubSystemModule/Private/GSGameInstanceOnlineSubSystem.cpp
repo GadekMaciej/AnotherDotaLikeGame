@@ -4,6 +4,7 @@
 #include "GSGameInstanceOnlineSubSystem.h"
 
 #include "OnlineSubsystemUtils.h"
+#include "GSOnlineSubSystemModule/GSOnlineSubSystemModule.h"
 #include "Kismet/GameplayStatics.h"
 
 UGSGameInstanceOnlineSubSystem::UGSGameInstanceOnlineSubSystem()
@@ -21,6 +22,7 @@ UGSGameInstanceOnlineSubSystem::UGSGameInstanceOnlineSubSystem()
 
 void UGSGameInstanceOnlineSubSystem::CreateSession(int32 NumPublicConnections, bool bIsLANMatch)
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session create fired"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (!SessionInterface.IsValid())
 	{
@@ -58,6 +60,7 @@ void UGSGameInstanceOnlineSubSystem::CreateSession(int32 NumPublicConnections, b
 
 void UGSGameInstanceOnlineSubSystem::UpdateSession()
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session update fired"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (!SessionInterface.IsValid())
 	{
@@ -84,6 +87,7 @@ void UGSGameInstanceOnlineSubSystem::UpdateSession()
 
 void UGSGameInstanceOnlineSubSystem::StartSession()
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session start fired"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (!SessionInterface.IsValid())
 	{
@@ -103,6 +107,7 @@ void UGSGameInstanceOnlineSubSystem::StartSession()
 
 void UGSGameInstanceOnlineSubSystem::EndSession()
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session end fired"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (!SessionInterface.IsValid())
 	{
@@ -122,6 +127,7 @@ void UGSGameInstanceOnlineSubSystem::EndSession()
 
 void UGSGameInstanceOnlineSubSystem::DestroySession()
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session Destroy fired"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (!SessionInterface.IsValid())
 	{
@@ -141,6 +147,7 @@ void UGSGameInstanceOnlineSubSystem::DestroySession()
 
 void UGSGameInstanceOnlineSubSystem::FindSession(int32 MaxSearchResults, bool bIsLANQuery)
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session find fired"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (!SessionInterface.IsValid())
 	{
@@ -154,7 +161,7 @@ void UGSGameInstanceOnlineSubSystem::FindSession(int32 MaxSearchResults, bool bI
 	LastSessionSearch->MaxSearchResults = MaxSearchResults;
 	LastSessionSearch->bIsLanQuery = bIsLANQuery;
 
-	//LastSessionSearch->QuerySettings.Set(SEARCH_PRESENCE, true, EOnlineComparisonOp::Equals);
+	LastSessionSearch->QuerySettings.Set(SEARCH_PRESENCE, true, EOnlineComparisonOp::Equals);
 
 	const ULocalPlayer* LocalPlayer = GetWorld()->GetFirstLocalPlayerFromController();
 	if (!SessionInterface->FindSessions(*LocalPlayer->GetPreferredUniqueNetId(), LastSessionSearch.ToSharedRef()))
@@ -167,7 +174,7 @@ void UGSGameInstanceOnlineSubSystem::FindSession(int32 MaxSearchResults, bool bI
 
 void UGSGameInstanceOnlineSubSystem::JoinSession(const FOnlineSessionSearchResult& SessionResult)
 {
-			
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session join fired"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (!SessionInterface.IsValid())
 	{
@@ -188,6 +195,7 @@ void UGSGameInstanceOnlineSubSystem::JoinSession(const FOnlineSessionSearchResul
 
 void UGSGameInstanceOnlineSubSystem::OnCreateSessionCompleted(FName SessionName, const bool bIsSuccessful)
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session create complete: %s"), bIsSuccessful? TEXT("Successs") : TEXT("failure"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (SessionInterface)
 	{
@@ -199,6 +207,7 @@ void UGSGameInstanceOnlineSubSystem::OnCreateSessionCompleted(FName SessionName,
 
 void UGSGameInstanceOnlineSubSystem::OnUpdateSessionCompleted(FName SessionName, const bool bIsSuccessful)
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session update complete: %s"), bIsSuccessful? TEXT("Successs") : TEXT("failure"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (SessionInterface)
 	{
@@ -210,6 +219,7 @@ void UGSGameInstanceOnlineSubSystem::OnUpdateSessionCompleted(FName SessionName,
 
 void UGSGameInstanceOnlineSubSystem::OnStartSessionCompleted(FName SessionName, bool bIsSuccessful)
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session start complete: %s"), bIsSuccessful? TEXT("Successs") : TEXT("failure"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (SessionInterface)
 	{
@@ -221,6 +231,7 @@ void UGSGameInstanceOnlineSubSystem::OnStartSessionCompleted(FName SessionName, 
 
 void UGSGameInstanceOnlineSubSystem::OnEndSessionCompleted(FName SessionName, const bool bIsSuccessful)
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session end complete: %s"), bIsSuccessful? TEXT("Successs") : TEXT("failure"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());;
 	if (SessionInterface)
 	{
@@ -232,6 +243,7 @@ void UGSGameInstanceOnlineSubSystem::OnEndSessionCompleted(FName SessionName, co
 
 void UGSGameInstanceOnlineSubSystem::OnDestroySessionCompleted(FName SessionName, const bool bIsSuccessful)
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session destroy complete: %s"), bIsSuccessful? TEXT("Successs") : TEXT("failure"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (SessionInterface)
 	{
@@ -243,6 +255,7 @@ void UGSGameInstanceOnlineSubSystem::OnDestroySessionCompleted(FName SessionName
 
 void UGSGameInstanceOnlineSubSystem::OnFindSessionCompleted(const bool bIsSuccessful)
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session find complete: %s"), bIsSuccessful? TEXT("Successs") : TEXT("failure"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (SessionInterface)
 	{
@@ -260,25 +273,19 @@ void UGSGameInstanceOnlineSubSystem::OnFindSessionCompleted(const bool bIsSucces
 
 void UGSGameInstanceOnlineSubSystem::OnJoinSessionCompleted(FName SessionName, EOnJoinSessionCompleteResult::Type Result)
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session join complete: %s"), Result == EOnJoinSessionCompleteResult::Type::Success? TEXT("Successs") : TEXT("failure"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
 	if (SessionInterface)
 	{
 		SessionInterface->ClearOnJoinSessionCompleteDelegate_Handle(OnJoinSessionCompleteDelegateHandle);
 	}
-	// // TODO debug only get rid of this
-	// FString Address;
-	// if(SessionInterface->GetResolvedConnectString(SessionName, Address))
-	// {
-	// 	APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
-	// 	PC->ClientTravel(Address, ETravelType::TRAVEL_Absolute);
-	// }
-	// //	^	^	^
 	TryTravelToCurrentSession();
 	OnJoinSessionCompleteEvent.Broadcast(Result);
 }
 
 bool UGSGameInstanceOnlineSubSystem::TryTravelToCurrentSession()
 {
+	UE_LOG(LogGSGIOS, Verbose, TEXT("Session travel fired"))
 	const IOnlineSessionPtr sessionInterface = Online::GetSessionInterface(GetWorld());
 	if (!sessionInterface.IsValid())
 	{

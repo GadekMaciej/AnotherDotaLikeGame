@@ -15,9 +15,10 @@ public class GiantSpider : ModuleRules
 			"Engine", 
 			"InputCore",
 			"GSMenuModule",
-			"GSOnlineSubSystemModule",
 			"OnlineSubsystem",
-			"OnlineSubsystemUtils"
+			"OnlineSubsystemUtils",
+			"GSOnlineSubSystemModule",
+			"OnlineSubsystemSteam"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

@@ -51,7 +51,7 @@ void UGSServerBrowserWidget::OnSwitch()
 	UGSGameInstanceOnlineSubSystem* GIOS = GetGameInstance()->GetSubsystem<UGSGameInstanceOnlineSubSystem>();
 	if (GIOS)
 	{
-		GIOS->FindSession();
+		GIOS->FindSession(60, false);
 	}
 }
 
