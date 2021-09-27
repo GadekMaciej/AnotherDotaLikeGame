@@ -20,7 +20,7 @@ UGSGameInstanceOnlineSubSystem::UGSGameInstanceOnlineSubSystem()
 	
 }
 
-void UGSGameInstanceOnlineSubSystem::CreateSession(int32 NumPublicConnections, bool bIsLANMatch)
+void UGSGameInstanceOnlineSubSystem::CreateSession(FString SessionName, int32 NumPublicConnections, bool bIsLANMatch)
 {
 	UE_LOG(LogGSGIOS, Verbose, TEXT("Session create fired"))
 	const IOnlineSessionPtr SessionInterface = Online::GetSessionInterface(GetWorld());
@@ -42,7 +42,8 @@ void UGSGameInstanceOnlineSubSystem::CreateSession(int32 NumPublicConnections, b
 		LastSessionSettings->bUsesPresence = true;
 		LastSessionSettings->bIsLANMatch = bIsLANMatch;
 		LastSessionSettings->bShouldAdvertise = true;
-
+		
+		LastSessionSettings->Set(GS_SETTING_SESSION_NAME, SessionName, EOnlineDataAdvertisementType::ViaOnlineServiceAndPing);
 		LastSessionSettings->Set(SETTING_MAPNAME, FString("Your Level Name"), EOnlineDataAdvertisementType::ViaOnlineService);
 
 		OnCreateSessionCompleteDelegateHandle = SessionInterface->AddOnCreateSessionCompleteDelegate_Handle(OnCreateSessionCompleteDelegate);

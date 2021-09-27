@@ -5,6 +5,7 @@
 
 #include "GSButtonWidget.h"
 #include "Components/Button.h"
+#include "Components/EditableTextBox.h"
 
 void UGSHostServerWidget::NativeOnInitialized()
 {
@@ -23,5 +24,5 @@ void UGSHostServerWidget::OnBackButtonClicked()
 
 void UGSHostServerWidget::OnHostButtonClicked()
 {
-	FOnHostButtonClickedEvent.Broadcast();
+	FOnHostButtonClickedEvent.Broadcast(ServerNameEditText->GetText().ToString());
 }

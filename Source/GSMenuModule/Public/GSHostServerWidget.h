@@ -11,7 +11,7 @@
  */
 
 DECLARE_DELEGATE(FOnBackButtonClicked)
-DECLARE_MULTICAST_DELEGATE(FOnMultiHostButtonClicked)
+DECLARE_MULTICAST_DELEGATE_OneParam(FOnMultiHostButtonClicked, FString)
 
 UCLASS(Abstract)
 class GSMENUMODULE_API UGSHostServerWidget : public UGSUserWidgetBase

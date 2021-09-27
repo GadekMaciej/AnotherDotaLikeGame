@@ -8,6 +8,7 @@
 #include "GSServerBrowserEntryObject.h"
 #include "Components/Button.h"
 #include "Components/ListView.h"
+#include "Components/WidgetInteractionComponent.h"
 
 void UGSServerBrowserWidget::NativeOnInitialized()
 {
@@ -53,6 +54,9 @@ void UGSServerBrowserWidget::OnSwitch()
 	{
 		GIOS->FindSession(60, false);
 	}
+	ServerListView->AddItem(NewObject<UGSServerBrowserEntryObject>());
+	ServerListView->AddItem(NewObject<UGSServerBrowserEntryObject>());
+	ServerListView->AddItem(NewObject<UGSServerBrowserEntryObject>());
 }
 
 void UGSServerBrowserWidget::RefreshServerList(const TArray<FOnlineSessionSearchResult>& SessionResults, bool bIsSuccessful)
@@ -61,9 +65,22 @@ void UGSServerBrowserWidget::RefreshServerList(const TArray<FOnlineSessionSearch
 	if (bIsSuccessful)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("session found just fine") );
-		for (auto result : SessionResults)
+		for (auto Session : SessionResults)
 		{
-			const FGSServerBrowserEntryStruct EntryData(FText::FromString(result.Session.GetSessionIdStr()));
+			FGSServerBrowserEntryStruct EntryData;
+			EntryData.SessionId = FText::FromString(Session.Session.SessionInfo->GetSessionId().ToString());
+			FString TempSessionName;
+			if(Session.Session.SessionSettings.Get(GS_SETTING_SESSION_NAME, TempSessionName))
+			{
+				EntryData.SessionName = FText::FromString(TempSessionName);
+			}
+			else
+			{
+				checkNoEntry()
+			}
+			EntryData.HostName = FText::FromString(Session.Session.OwningUserName);
+			EntryData.MaxNumberOfPlayers = Session.Session.SessionSettings.NumPublicConnections;
+			EntryData.CurrentNumberOfPlayers = EntryData.MaxNumberOfPlayers - Session.Session.NumOpenPublicConnections; 
 			UGSServerBrowserEntryObject* EntryObject = NewObject<UGSServerBrowserEntryObject>();
 			EntryObject->EntryData = EntryData;
 			ServerListView->AddItem(EntryObject);
@@ -101,7 +118,6 @@ void UGSServerBrowserWidget::OnJoinButtonClicked()
 	}else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("There is no selected Item"));
-
 	}
 }
 

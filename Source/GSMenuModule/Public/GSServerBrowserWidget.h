@@ -32,7 +32,6 @@ class GSMENUMODULE_API UGSServerBrowserWidget : public UGSUserWidgetBase
 	FOnMainMenuButtonClicked FOnMainMenuButtonClickedEvent;
 	
 	protected:
-	
 	private:
 	UPROPERTY(meta=(BindWidget))
 	class UGSButtonWidget* RefreshButton;

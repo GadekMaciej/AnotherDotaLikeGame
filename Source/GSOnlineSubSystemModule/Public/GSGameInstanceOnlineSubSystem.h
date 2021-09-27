@@ -10,6 +10,7 @@
 /**
  * 
  */
+#define GS_SETTING_SESSION_NAME FName(TEXT("SessionName"))
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FGSOnCreateSessionComplete, bool, bIsSuccessful);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FGSOnUpdateSessionComplete, bool, bIsSuccessful);
@@ -35,7 +36,7 @@ class GSONLINESUBSYSTEMMODULE_API UGSGameInstanceOnlineSubSystem : public UGameI
 	FGSOnJoinSessionComplete OnJoinSessionCompleteEvent;
 
 	public:
-	void CreateSession(int32 NumPublicConnections, bool bIsLANMatch);
+	void CreateSession(FString SessionName = TEXT("SessionDefaultName"), int32 NumPublicConnections = 2, bool bIsLANMatch = false);
 	void UpdateSession();
 	void StartSession();
 	void EndSession();
