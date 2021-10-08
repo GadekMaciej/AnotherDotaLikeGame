@@ -6,21 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f82729d-5bde-43af-8654-7b13ddc38ff9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Maps/TestLevel_BuiltData.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GS_LobbyLevelCharacter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GS_LobbyLevelCharacter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSMainMenuWidget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSMainMenuWidget.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSServerBrowserWidget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSServerBrowserWidget.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSServerListBrowserEntry.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Modules/Widgets/BP_GSServerListBrowserEntry.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSHostServerWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSHostServerWidget.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserEntryWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserEntryWidget.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSServerBrowserWidget.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSHostServerWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSHostServerWidget.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserEntryObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserEntryObject.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserEntryStruct.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserEntryStruct.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserEntryWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserEntryWidget.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerBrowserWidget.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/Private/GSGameInstanceOnlineSubSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/Private/GSGameInstanceOnlineSubSystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/Public/GSGameInstanceOnlineSubSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSOnlineSubSystemModule/Public/GSGameInstanceOnlineSubSystem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/GS/Maps/TestLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Maps/TestLevel.umap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,7 +296,11 @@
       <workItem from="1632508473205" duration="1354000" />
       <workItem from="1632648639503" duration="7562000" />
       <workItem from="1632728655777" duration="7262000" />
-      <workItem from="1632739182719" duration="7952000" />
+      <workItem from="1632739182719" duration="9469000" />
+      <workItem from="1632767750820" duration="1710000" />
+      <workItem from="1633026496687" duration="22000" />
+      <workItem from="1633513062648" duration="1370000" />
+      <workItem from="1633703828075" duration="1654000" />
     </task>
     <servers />
   </component>
