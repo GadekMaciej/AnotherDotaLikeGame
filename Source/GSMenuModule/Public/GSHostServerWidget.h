@@ -9,6 +9,10 @@
 /**
  * 
  */
+
+DECLARE_DELEGATE(FOnBackButtonClicked)
+DECLARE_MULTICAST_DELEGATE_OneParam(FOnMultiHostButtonClicked, FString)
+
 UCLASS(Abstract)
 class GSMENUMODULE_API UGSHostServerWidget : public UGSUserWidgetBase
 {
@@ -17,25 +21,28 @@ class GSMENUMODULE_API UGSHostServerWidget : public UGSUserWidgetBase
 	virtual void NativeOnInitialized() override;
 	
 	public:
-	UPROPERTY(meta=(BindWidget))
-	class UGSButtonWidget* BackButton;
+	FOnBackButtonClicked FOnBackButtonClickedEvent;
+	FOnMultiHostButtonClicked FOnHostButtonClickedEvent;
 	
-	UPROPERTY(meta=(BindWidget))
-	UGSButtonWidget* HostButton;
-
 	UPROPERTY(meta=(BindWidget))
 	class UEditableTextBox* ServerNameEditText;
 
-	UPROPERTY(EditDefaultsOnly, Category="GS|Navigation")
-	TSubclassOf<UGSUserWidgetBase> ServerBrowserClass;
+	protected:
+
+	private:
+	UPROPERTY(meta=(BindWidget))
+	class UGSButtonWidget* BackButton;
+	UPROPERTY(meta=(BindWidget))
+	UGSButtonWidget* HostButton;
 	
 	public:
-	UFUNCTION()
-	void OnBackButtonClicked();
 	
-	UFUNCTION()
+	protected:
+	UFUNCTION(BlueprintCallable)
+	void OnBackButtonClicked();
+	UFUNCTION(BlueprintCallable)
 	void OnHostButtonClicked();
+	
+	private:
 
-	UFUNCTION()
-	void OnSessionCreated(FName SessionName, bool bWasSuccessful);
 };

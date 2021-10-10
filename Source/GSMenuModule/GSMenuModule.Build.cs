@@ -11,7 +11,8 @@ public class GSMenuModule : ModuleRules
 		PublicDependencyModuleNames.AddRange(new string[]
 		{
 			"OnlineSubsystem",
-			"OnlineSubsystemUtils"
+			"OnlineSubsystemUtils",
+			"GSOnlineSubSystemModule"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[]

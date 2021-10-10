@@ -15,8 +15,8 @@ void UGSMainMenuWidget::NativeConstruct()
 void UGSMainMenuWidget::NativeOnInitialized()
 {
 	Super::NativeOnInitialized();
-	MultiplayerButton->ButtonElement->OnClicked.AddDynamic(this, &UGSMainMenuWidget::MultiplayerButtonOnClicked);
-	QuitButton->ButtonElement->OnClicked.AddDynamic(this, &UGSMainMenuWidget::QuitGame);
+	MultiplayerButton->ButtonElement->OnClicked.AddDynamic(this, &UGSMainMenuWidget::OnMultiplayerButtonClicked);
+	QuitButton->ButtonElement->OnClicked.AddDynamic(this, &UGSMainMenuWidget::OnQuitButtonClicked);
 }
 
 void UGSMainMenuWidget::SynchronizeProperties()
@@ -28,13 +28,19 @@ void UGSMainMenuWidget::SynchronizeProperties()
 	}
 }
 
-void UGSMainMenuWidget::QuitGame()
+void UGSMainMenuWidget::OnQuitButtonClicked()
 {
-	FGenericPlatformMisc::RequestExit(false);
+	if(!OnQuitButtonClickedEvent.ExecuteIfBound())
+	{
+		checkNoEntry();
+	}
 }
 
-void UGSMainMenuWidget::MultiplayerButtonOnClicked()
+void UGSMainMenuWidget::OnMultiplayerButtonClicked()
 {
-	NavigateToWidget(ServerBrowserWidgetClass);
+	if(!OnMultiplayerButtonClickedEvent.ExecuteIfBound())
+	{
+		checkNoEntry();
+	}
 }
 

@@ -9,19 +9,34 @@
 /**
  * 
  */
+
+DECLARE_DELEGATE(OnMultiplayerButtonClicked)
+DECLARE_DELEGATE(OnQuitButtonClicked)
+
 UCLASS(Abstract)
 class GSMENUMODULE_API UGSMainMenuWidget : public UGSUserWidgetBase
 {
 	GENERATED_BODY()
 	
+	public:
+	virtual void SynchronizeProperties() override;
+	
 	protected:
 	virtual void NativeConstruct() override;
 	virtual void NativeOnInitialized() override;
+
+	private:
 	
 	public:
-	virtual void SynchronizeProperties() override;
+	OnMultiplayerButtonClicked OnMultiplayerButtonClickedEvent;
+	OnQuitButtonClicked OnQuitButtonClickedEvent;
 
-	public:
+	UPROPERTY(EditAnywhere, Category="GS|Text")
+	FText TitleText;
+	
+	protected:
+	
+	private:
 	UPROPERTY(meta=(BindWidget))
 	class UGSButtonWidget* SingleplayerButton;
 	
@@ -34,16 +49,14 @@ class GSMENUMODULE_API UGSMainMenuWidget : public UGSUserWidgetBase
 	UPROPERTY(meta=(BindWidget))
 	class UTextBlock* TitleTextBlock;
 
-	UPROPERTY(EditAnywhere, Category="GS|Text")
-	FText TitleText;
-
-	UPROPERTY(EditDefaultsOnly, NoClear, Category="GS|Navigation")
-	TSubclassOf<UGSUserWidgetBase> ServerBrowserWidgetClass;
+	public:
 	
 	protected:
 	UFUNCTION(BlueprintCallable)
-	void QuitGame();
+	void OnQuitButtonClicked();
 
 	UFUNCTION(BlueprintCallable)
-	void MultiplayerButtonOnClicked();
+	void OnMultiplayerButtonClicked();
+	
+	private:
 };

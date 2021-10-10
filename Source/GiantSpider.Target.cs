@@ -9,6 +9,9 @@ public class GiantSpiderTarget : TargetRules
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.AddRange( new string[] { "GiantSpider" } );
+		ExtraModuleNames.AddRange( new string[]
+		{
+			"GiantSpider",
+		} );
 	}
 }

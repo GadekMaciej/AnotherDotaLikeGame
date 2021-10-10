@@ -4,18 +4,35 @@
 
 #include "CoreMinimal.h"
 #include "GSUserWidgetBase.h"
+#include "OnlineSubsystemUtils.h"
 #include "GSServerBrowserWidget.generated.h"
 
 /**
  * 
  */
+
+DECLARE_DELEGATE(FOnRefreshButtonClicked)
+DECLARE_DELEGATE(FOnJoinButtonClicked)
+DECLARE_DELEGATE(FOnHostButtonClicked)
+DECLARE_DELEGATE(FOnMainMenuButtonClicked)
+
+
 UCLASS(Abstract)
 class GSMENUMODULE_API UGSServerBrowserWidget : public UGSUserWidgetBase
 {
 	GENERATED_BODY()
-	public:
+	
+	protected:
 	virtual void NativeOnInitialized() override;
-public:
+	
+	public:
+	FOnRefreshButtonClicked FOnRefreshButtonClickedEvent;
+	FOnJoinButtonClicked FOnJoinButtonClickedEvent;
+	FOnHostButtonClicked FOnHostButtonClickedEvent;
+	FOnMainMenuButtonClicked FOnMainMenuButtonClickedEvent;
+	
+	protected:
+	private:
 	UPROPERTY(meta=(BindWidget))
 	class UGSButtonWidget* RefreshButton;
 	
@@ -30,23 +47,24 @@ public:
 
 	UPROPERTY(meta=(BindWidget))
 	class UListView* ServerListView;
+
+	TArray<FOnlineSessionSearchResult> LastSessionSearchResults;
 	
-	UPROPERTY(EditDefaultsOnly, NoClear, Category="GS|Navigation")
-	TSubclassOf<UGSUserWidgetBase> MainMenuWidget;
-
-	UPROPERTY(EditDefaultsOnly, NoClear, Category="GS|Navigation")
-	TSubclassOf<UGSUserWidgetBase> HostServerWidget;
-
-	public:
-	UFUNCTION(BlueprintCallable)
-	void OnMainMenuButtonClicked();
-
-	UFUNCTION(BlueprintCallable)
-	void OnHostButtonClicked();
-
-	UFUNCTION(BlueprintCallable)
-	void ServerListTestFunction();
-	
+	public:	
 	UFUNCTION(BlueprintCallable)
 	void OnServerListEntryClicked(UObject* Item);
+	
+	virtual void OnSwitch() override;
+	
+	protected:
+	UFUNCTION(BlueprintCallable)
+	void OnRefreshButtonClicked();
+	UFUNCTION(BlueprintCallable)
+	void OnJoinButtonClicked();
+	UFUNCTION(BlueprintCallable)
+	void OnMainMenuButtonClicked();
+	UFUNCTION(BlueprintCallable)
+	void OnHostButtonClicked();
+	// TODO make below function UFUNCTION, by using Ustruct that wraps FOnlineSessionSearchResult.
+	void RefreshServerList(const TArray<FOnlineSessionSearchResult>& SessionResults, bool bIsSuccessful);
 };

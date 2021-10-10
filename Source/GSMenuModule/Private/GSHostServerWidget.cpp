@@ -6,7 +6,6 @@
 #include "GSButtonWidget.h"
 #include "Components/Button.h"
 #include "Components/EditableTextBox.h"
-#include "OnlineSubsystem.h"
 
 void UGSHostServerWidget::NativeOnInitialized()
 {
@@ -17,21 +16,13 @@ void UGSHostServerWidget::NativeOnInitialized()
 
 void UGSHostServerWidget::OnBackButtonClicked()
 {
-	NavigateToWidget(ServerBrowserClass);
+	if(!FOnBackButtonClickedEvent.ExecuteIfBound())
+	{
+		checkNoEntry();
+	}
 }
 
 void UGSHostServerWidget::OnHostButtonClicked()
 {
-	const FName SessionName = FName(ServerNameEditText->GetText().ToString());
-
-	// sandbox \/
-	//FOnlineSessionSettings ExampleSessionSettings;
-	//IOnlineSession::CreateSession(0, SessionName, ExampleSessionSettings);
-	//IOnlineSession::OnCreateSessionCompleteDelegates.AddUObject(this, &UGSHostServerWidget::OnSessionCreated);
-	// end ^^^
-}
-
-void UGSHostServerWidget::OnSessionCreated(FName SessionName, bool bWasSuccessful)
-{
-	IOnlineSubsystem::Get();
+	FOnHostButtonClickedEvent.Broadcast(ServerNameEditText->GetText().ToString());
 }

@@ -26,6 +26,6 @@ public:
 	class UTextBlock* SessionHostTextField;
 
 	UPROPERTY(meta=(BindWidget))
-	class UTextBlock* SessionIdTextField;
+	class UTextBlock* SessionPlayerCount;
 
 };

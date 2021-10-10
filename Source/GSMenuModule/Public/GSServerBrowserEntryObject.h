@@ -10,7 +10,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class GSMENUMODULE_API UGSServerBrowserEntryObject : public UObject
 {
 	GENERATED_BODY()

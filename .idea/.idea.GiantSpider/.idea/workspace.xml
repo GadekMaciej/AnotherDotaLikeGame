@@ -6,14 +6,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f82729d-5bde-43af-8654-7b13ddc38ff9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GSGameInstanceOnlineSubSystem.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GSGameInstanceOnlineSubSystem.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/BP_GSLobbyLevelCharacter.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Materials/Red_Diffuse.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Materials/RegularDiffuse.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Meshes/Cube_Cube.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Meshes/Cube_Cube_PhysicsAsset.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Meshes/Cube_Cube_Skeleton.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GS_LobbyLevelScriptActor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GS_LobbyLevelScriptActor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/GSMenuModule.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/GSMenuModule.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSHostServerWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Private/GSHostServerWidget.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSHostServerWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GSMenuModule/Public/GSHostServerWidget.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/GiantSpider.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/GiantSpider.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/GS/BP_GSMainMenuGameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/BP_GSMainMenuGameMode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/GS/Maps/TestLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Maps/TestLevel.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/GS/Maps/TestLevel_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Maps/TestLevel_BuiltData.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Private/GS_LobbyLevelCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GS_LobbyLevelCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Public/GS_LobbyLevelCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GS_LobbyLevelCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +40,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Inc/GSOnlineSubSystemModule/GSOnlineSubSystemModuleClasses.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GSMenuModule/Public/GSServerListMenuWidget.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d10sdklayers.h" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xjG2iyWKIb9bicEuQ3ASz5Ou6B" />
   <component name="ProjectViewState">
@@ -40,13 +50,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.42029887" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.30610022" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RiderTodoViewSettings" groupByProject="false" />
   <component name="RunManager" selected="C++ Project.GiantSpider">
     <configuration name="GiantSpider" type="CppProject" factoryName="C++ Project">
       <configuration_1>
@@ -277,6 +291,27 @@
       <workItem from="1631688416601" duration="18079000" />
       <workItem from="1631775607783" duration="27976000" />
       <workItem from="1631863423804" duration="23451000" />
+      <workItem from="1631905887363" duration="596000" />
+      <workItem from="1631963657610" duration="17248000" />
+      <workItem from="1632035271109" duration="16955000" />
+      <workItem from="1632060341021" duration="11935000" />
+      <workItem from="1632073753908" duration="1820000" />
+      <workItem from="1632128056521" duration="11652000" />
+      <workItem from="1632227864091" duration="17844000" />
+      <workItem from="1632252859517" duration="900000" />
+      <workItem from="1632254036098" duration="318000" />
+      <workItem from="1632291324772" duration="13756000" />
+      <workItem from="1632389571089" duration="3073000" />
+      <workItem from="1632502660167" duration="5655000" />
+      <workItem from="1632508473205" duration="1354000" />
+      <workItem from="1632648639503" duration="7562000" />
+      <workItem from="1632728655777" duration="7262000" />
+      <workItem from="1632739182719" duration="9469000" />
+      <workItem from="1632767750820" duration="1710000" />
+      <workItem from="1633026496687" duration="22000" />
+      <workItem from="1633513062648" duration="1370000" />
+      <workItem from="1633703828075" duration="13024000" />
+      <workItem from="1633849253465" duration="973000" />
     </task>
     <servers />
   </component>
@@ -300,5 +335,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_4.26/Engine/Source/Runtime/Engine/Private/PlayerController.cpp</url>
+          <line>4773</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -10,17 +10,18 @@
 /**
  * 
  */
+#define GS_SETTING_SESSION_NAME FName(TEXT("SessionName"))
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FGSOnCreateSessionComplete, bool, bIsSuccessful);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FGSOnUpdateSessionComplete, bool, bIsSuccessful);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FGSOnStartSessionComplete, bool, bIsSuccessful);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FGSOnEndSessionComplete, bool, bIsSuccessful);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FGSOnDestroySessionComplete, bool, bIsSuccessful);
-DECLARE_MULTICAST_DELEGATE_TwoParams(FGSOnFindSessionsComplete, const TArray<FOnlineSessionSearchResult>& SessionResults, bool bIsSuccessfull);
+DECLARE_MULTICAST_DELEGATE_TwoParams(FGSOnFindSessionsComplete, const TArray<FOnlineSessionSearchResult>& SessionResults, bool bIsSuccessful);
 DECLARE_MULTICAST_DELEGATE_OneParam(FGSOnJoinSessionComplete, EOnJoinSessionCompleteResult::Type Result);
 
 UCLASS()
-class GIANTSPIDER_API UGSGameInstanceOnlineSubSystem : public UGameInstanceSubsystem
+class GSONLINESUBSYSTEMMODULE_API UGSGameInstanceOnlineSubSystem : public UGameInstanceSubsystem
 {
 	GENERATED_BODY()
 	
@@ -35,12 +36,12 @@ class GIANTSPIDER_API UGSGameInstanceOnlineSubSystem : public UGameInstanceSubsy
 	FGSOnJoinSessionComplete OnJoinSessionCompleteEvent;
 
 	public:
-	void CreateSession(int32 NumPublicConnections, bool bIsLANMatch);
+	void CreateSession(FString SessionName = TEXT("SessionDefaultName"), int32 NumPublicConnections = 2, bool bIsLANMatch = false);
 	void UpdateSession();
 	void StartSession();
 	void EndSession();
 	void DestroySession();
-	void FindSession(int32 MaxSearchResults, bool bIsLANQuery);
+	void FindSession(int32 MaxSearchResults = 32, bool bIsLANQuery = true);
 	void JoinSession(const FOnlineSessionSearchResult& SessionResult);
 	
 	protected:
