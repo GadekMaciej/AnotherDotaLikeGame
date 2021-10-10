@@ -6,12 +6,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f82729d-5bde-43af-8654-7b13ddc38ff9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/GS/Maps/TestLevel_BuiltData.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GS_LobbyLevelCharacter.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GS_LobbyLevelCharacter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/BP_GSLobbyLevelCharacter.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Materials/Red_Diffuse.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Materials/RegularDiffuse.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Meshes/Cube_Cube.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Meshes/Cube_Cube_PhysicsAsset.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/GS/Meshes/Cube_Cube_Skeleton.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GS_LobbyLevelScriptActor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GS_LobbyLevelScriptActor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GiantSpider/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/GS/BP_GSMainMenuGameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/BP_GSMainMenuGameMode.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/GS/Maps/TestLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Maps/TestLevel.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/GS/Maps/TestLevel_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GS/Maps/TestLevel_BuiltData.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Private/GS_LobbyLevelCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Private/GS_LobbyLevelCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GiantSpider/Public/GS_LobbyLevelCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GiantSpider/Public/GS_LobbyLevelCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +310,8 @@
       <workItem from="1632767750820" duration="1710000" />
       <workItem from="1633026496687" duration="22000" />
       <workItem from="1633513062648" duration="1370000" />
-      <workItem from="1633703828075" duration="1654000" />
+      <workItem from="1633703828075" duration="13024000" />
+      <workItem from="1633849253465" duration="973000" />
     </task>
     <servers />
   </component>
